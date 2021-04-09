@@ -33,8 +33,7 @@ If($Cdrive.Count -ne 1){
     }
 }
 Else{
-    manage-bde -on c: -SkipHardwareTest
-
+	EnableBitLocker
 }
 
 
