@@ -33,7 +33,7 @@ If($Cdrive.Count -ne 1){
     }
 }
 Else{
-	EnableBitLocker
+	BitLockerEnable
 }
 
 
@@ -56,7 +56,7 @@ manage-bde -protectors -aadbackup C: $key
 #}
 
 
-Function EnableBitLocker($MountPoint){
+Function BitLockerEnable($MountPoint){
     $BLStatus = (Get-BitLockerVolume -MountPoint $MountPoint).VolumeStatus
     $BLProtection = (Get-BitLockerVolume -MountPoint $MountPoint).ProtectionStatus
 
